@@ -17,15 +17,15 @@ module Crawler
 
     protected
 
-    def save_image(image_link)
-       begin
-        url = open(image_link)
-        MiniMagick::Image.read(url)
-      rescue => e
-         Rails.logger.info "=====>#{self}::#{__method__} error: #{e.inspect}"
-      end
+    #def save_image(image_link)
+       #begin
+        #url = open(image_link)
+        #MiniMagick::Image.read(url)
+      #rescue => e
+         #Rails.logger.info "=====>#{self}::#{__method__} error: #{e.inspect}"
+      #end
 
-    end
+    #end
 
     def generate_image_name(image_link)
       image_name = image_link.split('/').last.split('.').first

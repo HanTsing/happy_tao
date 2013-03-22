@@ -17,9 +17,7 @@ module Crawler
         image_name = generate_image_name(image_link)
         deal_href     = image_link_element.first
 
-        deal = ::Deal.new(title:title, count:count, price:price, link:image_link)
-        deal.image = save_image(image_link)
-        deal.save
+        ::Deal.create(title:title, count:count, price:price, image_link:image_link)
     end
   end
 
