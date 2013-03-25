@@ -1,0 +1,58 @@
+// Place all the styles related to the deals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+$width: 1170px;
+
+/* navbar*/
+.navbar{
+  width:100%;
+  height:100%;
+  padding-top:10px;
+  footer { width:$width; float:left;}
+}
+
+.head {
+  width:$width;
+  height:105px;
+  margin:0 auto;
+}
+
+.navbar_left{
+  width:100px;
+  height:32px;
+  float:left;
+}
+
+.navbar_right{
+  float:right;
+  .nav{
+    &.pull-right{
+      .sep { border-left:1px solid #DDD; width:1px; margin:12px; height:15px }
+      li { a { font-size:20px; color:#08C; padding:9px 20px 7px} }
+    }
+  }
+}
+
+.content{
+  width:$width;
+  height:100px;
+  float:left;
+  margin-top:90px
+}
+
+.content_left{
+  width:600px;
+  height:60px;
+  float:left;
+  p { font-size:14px;}
+}
+
+.content_right{
+  width:150px;
+  height:30px;
+  float:right;
+  padding-top:30px;
+  margin-right:50px;
+}

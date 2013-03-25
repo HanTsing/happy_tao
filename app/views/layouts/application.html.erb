@@ -5,10 +5,25 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+
+  $(function(){
+	  alert(0);
+	  $("#img-txt-box1").imgTxtCut({
+		  speed : 300
+	  });
+
+
+  });
+
+  </script>
 </head>
-<body>
+<body id="main">
 
-<%= yield %>
-
-</body>
+<div class="navbar">
+ <%= render :partial => "/share/navbar"%>
+ <%= yield %>
+ <%= render :partial => "/share/foot"%>
+</div>
+  </body>
 </html>

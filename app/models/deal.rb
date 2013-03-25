@@ -9,6 +9,8 @@ class Deal
   field :image_name, type: String
   field :image_link, type: String
 
+  paginates_per 50
+
   mount_uploader :image, ImageUploader
 
   before_save :save_image, :gen_default_name
