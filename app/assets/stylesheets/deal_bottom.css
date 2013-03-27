@@ -1,0 +1,25 @@
+﻿/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;  text-align:center; margin:0 auto; }
+table{border-collapse:collapse;border-spacing:0;}
+
+.clearfloat{height:0;font-size:1px;clear:both;line-height:0;}
+
+#container{ width:990px; text-align:center; margin:0 auto; padding-top:120px;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#ef9b11; text-decoration:underline;}
+
+.IndexPost-Title-Bg{width:990px;}
+
+#zishu_test { width: 152px; height: 220px; float:left; display:inline; margin-right:12px; margin-bottom:6px; overflow:hidden;}
+#zishu_test:hover { width: 152px; }
+#zishu_test li{ float:left; width:152px;text-align:center; margin:0 auto; list-style:none;}
+#zishu_test li a{border:1px solid #E2E2E2;width:150px; padding-top:10px; height:190px; display:block;color:#858585;text-decoration : none;line-height: 17px;font-family: "Arial";font-size: 10px;}
+#zishu_test li img{ width:150px; height:150px; }
+#zishu_test li span{display:none;}
+#zishu_test li span b{ text-decoration:line-through; margin-right:10px; color:#f00; font-weight:normal;}
+
+#zishu_test li a:hover{  height:189px;} 
+#zishu_test li a:hover span{margin-top:149px;display:block;background:#d9d9d9; padding-top:14px; height:26px; width:150px;color:#fff;position:absolute; } 

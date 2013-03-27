@@ -1,9 +1,12 @@
 <li>
-	<div class="imgBox">
-		<a href="#"><img src="<%= deal.image_link%>" width="200" height="200" /></a>
-	</div>
-	<div class="txtBox">
-		<h3><a href="#">标题标题标题标题标题标标</a></h3>
-		<p><a href="#">描述描述描述描述描述描述描述描述描述描述描述描</a></p>
-	</div>
+	<a class="a1"  href="<%= deal.link %>" target="_blank">
+		<img alt="模板王" src="<%= deal.image_link%>" />
+	</a>
+	<p>
+		<a  href="<%= deal.link %>" target="_blank"><br />
+			促销价
+			<span class="price_symbol">￥</span>
+			<span class="price_num">3.</span>
+			<span class="price_change"><%= deal.price%></span>
+		</a></p>
 </li>

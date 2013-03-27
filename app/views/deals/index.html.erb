@@ -1,7 +1,28 @@
 <div class="deal_list">
-	<div class="img-txt-flaser clearfix" id="img-txt-box1">
-		<ul>
-			<%= render :partial => "deal", :collection => @deals %>
-		</ul>
+	<div class="box" id="sales-product">
+		<div class="module-title">
+			<H3>促销产品</H3>
+		</div>
+		
+		<div class="js j_index_carouseProduct" id="sales-product-main">
+			<ul>
+				<%= render :partial => "deal", :collection => @deals %>
+			</ul>
+		</div>
 	</div>
 </div>
+
+<div class="bottom_deals">
+	<ul class="IndexPost-Title-Bg">
+		<% @deals.each do |deal|%>
+		<div id="zishu_test">
+			<li> 
+				<a href="<%= deal.link%>" target="_blank">
+					<span><b>￥1000</b>￥600</span>
+					<img src="<%= deal.image_link%>">诺基亚（NOKIA）1209 GSM手机 (蓝色)超高…
+				</a> 
+			</li>
+		</div>
+		<% end %>
+	</ul>
+</div>	
