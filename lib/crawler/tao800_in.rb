@@ -22,7 +22,7 @@ module Crawler
         p title.encoding
         p title
 
-        #::Deal.create(title:title, count:count, price:price, image_link:image_link, link:link_element)
+        ::Deal.create(title:title, count:count, price:price, image_link:image_link, link:link_element)
     end
   end
 
