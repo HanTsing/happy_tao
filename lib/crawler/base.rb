@@ -2,7 +2,6 @@
 require 'rubygems'
 require 'hpricot'
 require 'open-uri'
-require 'iconv'
 require 'digest/md5'
 require 'mini_magick'
 module Crawler
@@ -10,7 +9,7 @@ module Crawler
 
     def initialize(url)
       begin
-        @doc = Hpricot(Iconv.conv("UTF-8//IGNORE","GBK//IGNORE",open(url).read.to_s))
+        @doc = Hpricot(open(url).read.to_s)
       rescue
         @doc = nil
       end
