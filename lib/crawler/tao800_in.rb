@@ -18,7 +18,11 @@ module Crawler
         image_name = generate_image_name(image_link)
         deal_href     = image_link_element.first
 
-        ::Deal.create(title:title, count:count, price:price, image_link:image_link, link:link_element)
+        puts "-------"
+        p title.encoding
+        p title
+
+        #::Deal.create(title:title, count:count, price:price, image_link:image_link, link:link_element)
     end
   end
 

@@ -1,3 +1,4 @@
+# encoding: utf-8
 module Crawler
   class CrawlerRoleFinder
     def self.find_role(site, tag = nil)
