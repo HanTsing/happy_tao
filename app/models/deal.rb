@@ -8,6 +8,9 @@ class Deal
   field :status,  type: Integer
   field :image_name, type: String
   field :image_link, type: String
+  field :sort_id, type: Integer
+
+  belongs_to :sort
 
   paginates_per 50
 

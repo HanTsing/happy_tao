@@ -9,6 +9,7 @@ gem "mongoid", "~> 3.1.2"
 gem "moped", "1.4.2"
 gem "hpricot", "~> 0.8.6"
 gem "kaminari", "~> 0.14.1"
+gem 'nokogiri'
 
 gem "mongo", "~> 1.8.3"
 gem 'bson', "~> 1.8.3"

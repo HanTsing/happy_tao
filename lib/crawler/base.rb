@@ -1,6 +1,7 @@
 # encoding: utf-8
 require 'rubygems'
 require 'hpricot'
+require 'nokogiri'
 require 'open-uri'
 require 'digest/md5'
 require 'mini_magick'
@@ -9,9 +10,11 @@ module Crawler
 
     def initialize(url)
       begin
-        @doc = Hpricot(open(url).read.to_s)
+        # @doc = Hpricot(open(url).read.to_s)
+        @mi = Nokogiri::HTML(open(url).read.to_s)
       rescue
-        @doc = nil
+        # @doc = nil
+        @mi = nil
       end
     end
 

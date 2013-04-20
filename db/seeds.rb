@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
     CrawlerSite.create(name:"tao800_in", url:"http://www.tao800.in/item/9.9.html")
+    CrawlerSite.create(name:"mi56_com", url:"http://www.56mi.com/")
