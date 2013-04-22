@@ -6,7 +6,7 @@ module Crawler
   	doc = grab_sort
   	doc.each do |key,value|
   		flag = ::Sort.find_by(name: key) rescue nil
-  		if flag==nil
+  		unless flag
 	  		flag = ::Sort.create!(name: key)
   		end
   		get_deal(value,flag)
@@ -44,13 +44,13 @@ module Crawler
 			al = Nokogiri::HTML(open(lik).read.to_s)
 			source_link = al.to_s.match(/gotarget\('(.+?)'\)/)[1].to_s
       ll = flag.deals.find_by(link: source_link) rescue nil
-      if ll != nil
-         puts "cunzai============================>#{source_link}"
+      if ll
+        puts "cunzai============================>#{source_link}"
       else 
         puts title,price,count,image_link,image_name,source_link
-			  puts "deal-----------------------------"
-			  a = flag.deals.create(title: title, price: price, count: count, image_link: image_link, image_name: image_name, link: source_link)
-		    puts a.to_json
+        puts "deal-----------------------------"
+        a = flag.deals.create(title: title, price: price, count: count, image_link: image_link, image_name: image_name, link: source_link)
+        puts a.to_json
       end
     end
   	end
