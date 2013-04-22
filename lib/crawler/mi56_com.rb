@@ -43,10 +43,15 @@ module Crawler
 			image_name = generate_image_name(image_link)
 			al = Nokogiri::HTML(open(lik).read.to_s)
 			source_link = al.to_s.match(/gotarget\('(.+?)'\)/)[1].to_s
-      puts title,price,count,image_link,image_name,source_link
-			puts "deal-----------------------------"
-			a = flag.deals.create(title: title, price: price, count: count, image_link: image_link, image_name: image_name, link: source_link)
-		  puts a.to_json
+      ll = flag.deals.find_by(link: source_link) rescue nil
+      if ll != nil
+         puts "cunzai============================>#{source_link}"
+      else 
+        puts title,price,count,image_link,image_name,source_link
+			  puts "deal-----------------------------"
+			  a = flag.deals.create(title: title, price: price, count: count, image_link: image_link, image_name: image_name, link: source_link)
+		    puts a.to_json
+      end
     end
   	end
   end
