@@ -25,10 +25,8 @@ module Crawler
   end
 
   def get_deal(link,flag)
-    puts "link---------------------#{link}"
   	doc = Nokogiri::HTML(open(link).read.to_s)
   	page_num = doc.at_css("div.s_page").xpath(".//a")[-2][:href].match(/\d+/).to_s.to_i rescue 1
-  	puts "页数==============>#{page_num}"
   	1.upto page_num do |x|
   		unless x==1
   			lk = link.split(".html").first + "_#{x}.html"
@@ -47,8 +45,6 @@ module Crawler
       if ll
         puts "cunzai============================>#{source_link}"
       else 
-        puts title,price,count,image_link,image_name,source_link
-        puts "deal-----------------------------"
         a = flag.deals.create(title: title, price: price, count: count, image_link: image_link, image_name: image_name, link: source_link)
         puts a.to_json
       end
