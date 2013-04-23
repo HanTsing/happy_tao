@@ -1,17 +1,9 @@
 class DealsController < ApplicationController
-  # GET /deals
-  # GET /deals.json
   def index
-    @deals = Deal.page(params[:page]).limit(12)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @deals }
-    end
+    @recommended_deals = Deal.page(params[:page]).limit(12)
+    @deals = Deal.page(params[:page]).per(4)
   end
 
-  # GET /deals/1
-  # GET /deals/1.json
   def show
     @deal = Deal.find(params[:id])
 
@@ -21,8 +13,6 @@ class DealsController < ApplicationController
     end
   end
 
-  # GET /deals/new
-  # GET /deals/new.json
   def new
     @deal = Deal.new
 
@@ -32,13 +22,10 @@ class DealsController < ApplicationController
     end
   end
 
-  # GET /deals/1/edit
   def edit
     @deal = Deal.find(params[:id])
   end
 
-  # POST /deals
-  # POST /deals.json
   def create
     @deal = Deal.new(params[:deal])
 
