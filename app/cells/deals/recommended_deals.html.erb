@@ -1,0 +1,15 @@
+<div class="recommended_list">
+  <div class="box" id="sales-product">
+    <div class="module-title">
+      <H3>促销产品</H3>
+    </div>
+
+    <div class="js j_index_carouseProduct" id="sales-product-main">
+      <ul>
+        <% @recommended_deals.each do |deal| %>
+          <%= render_cell :deals, :item, deal %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

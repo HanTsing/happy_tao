@@ -22,7 +22,9 @@ gem "mini_magick", "~> 3.4"
 gem "mongoid_auto_increment_id", "~> 0.5.0"
 # mongo migrate
 gem "mongoid_rails_migrations", "~> 1.0.0"
-
+#去掉assets日志
+gem 'quiet_assets', :git => 'git://github.com/AgilionApps/quiet_assets.git'
+gem "cells", "3.8.8"
 
 # Gems used only for assets and not required
 # in production environments by default.

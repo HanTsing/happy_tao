@@ -1,7 +1,7 @@
 class DealsController < ApplicationController
   def index
-    @recommended_deals = Deal.page(params[:page]).limit(12)
-    @deals = Deal.page(params[:page]).per(4)
+    #@recommended_deals = Deal.page(params[:page]).limit(12)
+    #@deals = Deal.page(params[:page]).per(4)
   end
 
   def show
