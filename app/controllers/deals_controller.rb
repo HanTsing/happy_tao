@@ -1,7 +1,7 @@
 class DealsController < ApplicationController
   def index
-    #@recommended_deals = Deal.page(params[:page]).limit(12)
-    #@deals = Deal.page(params[:page]).per(4)
+    sort_id = params[:sort_id].blank? ? Sort.first.id : params[:sort_id]
+    @deals = Deal.where(sort_id: sort_id).page(params[:page]).per(9)
   end
 
   def show

@@ -1,36 +1,21 @@
-<div class="deals">
-	<div class="title">
-		<div class="title_t">
-			<a href="/nvzhuang.html"  target="_blank"  title="时尚女装">时尚女装</a>
-		</div>
-		<div class="title_sub">
-			<p>
-				<a href="" target="_blank">连衣裙</a> <a href="" target="_blank">T恤</a>
-				<a href="" target="_blank">衬衫</a>   <a href="" target="_blank">牛仔裤</a>
-				<a href="" target="_blank">半身裙</a> <a href="" target="_blank">蕾丝衫</a>
-				<a href="" target="_blank">针织衫</a> <a href="" target="_blank">卫衣</a>
-				<a href="" target="_blank">雪纺衫</a> <a href="" target="_blank">短裤</a>
-				<a href="" target="_blank">中老年装</a> <a href=""target="_blank">大码女装</a>
-			</p>
-		</div>
-		<div class="title_m"><a href="" target="_blank" class="more">更多</a></div>
-	</div>
-	<div class="list">
-		<% @deals.each do |deal|%>
-		<div class="box">
-			<div class="tody"></div>
-			<div class="boxTop"><a href="#"><img src="<%= deal.image_link %>"></a></div>
-			<div class="sbox_nam">
-				<a href="/S/140153.html" target="_blank" title="">婷美正品包邮春夏瘦身内裤婷美正品包邮春夏瘦身内裤</a>
-			</div>
-			<div class="sbox_pri">
-				<span class="sbox_pri_primary">原价<b>268</b></span>
-			</div>
-			<div class="sbox_buy">
-				<span class="sbox_buy_now"><b>69.01</b></span>
-				<span class="sbox_buy_buybtn"><a href="#" target="_blank">立即购买</a></span>
-			</div>
-		</div>
-		<% end %>
-	</div>
+<div class="content">
+  <% @deals.each do |deal| %>
+    <div class="block">
+      <div class="tody"></div>
+      <h2><a href="#"><%= deal.title %></a></h2>
+      <div class="boxTop"><a href="#"><img src="<%= deal.image_link %>"></a></div>
+      <div class="jiage">
+        <div class="jine"><span>¥<%= deal.price %></span>&nbsp;&nbsp;&nbsp;原价¥38</div>
+        <div class="btn"> <a href="#"> <%= image_tag("tu_4.jpg") %></a></div>
+      </div>
+      <div class="like">
+        <ul>
+          <li><a title="喜欢"></a><%= image_tag("heart1.gif") %></li>
+          <li>282</li>
+          <li>分享</li>
+          <li><a href="#">举报</a></li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
 </div>

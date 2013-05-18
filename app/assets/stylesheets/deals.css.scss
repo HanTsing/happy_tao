@@ -20,13 +20,14 @@ a {
 
 .navbar {
 	.deals {
-		height:1000px; width: 1050px; margin:0 auto;
+		height:800px; width: 1050px; margin:0 auto;
 		.title {
 			height: 25px; width: 1050px; border-top:red 2px solid;
-			.title_t   { width: 115px; height:25px; margin: 12px 6px 0 14px;
-				float: left; background:url("http://www.56mi.com/imgs/flo.png") no-repeat;
-				a { display: block; text-indent:-1000em; }
-			}
+
+        .title_t {
+          width: 115px; height:25px; margin: 12px 6px 0 14px;
+          a { display: block; text-indent:-1000em; }
+        }
 			.title_sub {
 				width: 800px; height:25px; float: left; margin: 15px 0px 0 20px; text-align:right;
 				p { a { margin-left:10px;} }

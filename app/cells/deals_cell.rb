@@ -1,7 +1,7 @@
 class DealsCell < Cell::Rails
 
-  def list
-    @deals = Deal.page(params[:page]).per(4)
+  def list(deals)
+    @deals = deals
     render
   end
 

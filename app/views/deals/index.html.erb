@@ -1,3 +1,7 @@
-<%#= render :partial => "recommended_deals"%>
-<%= render_cell :deals, :recommended_deals %>
-<%= render_cell :deals, :list %>
+<div class="center">
+  <div class="banner_warp">
+    <div class="banner"></div>
+  </div>
+</div>
+<%= render_cell :deals, :list, @deals %>
+<%#= render_cell :deals, :recommended_deals %>
