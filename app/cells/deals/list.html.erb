@@ -1,21 +1,8 @@
 <div class="content">
   <% @deals.each do |deal| %>
     <div class="block">
-      <div class="tody"></div>
-      <h2><a href="#"><%= deal.title %></a></h2>
-      <div class="boxTop"><a href="#"><img src="<%= deal.image_link %>"></a></div>
-      <div class="jiage">
-        <div class="jine"><span>¥<%= deal.price %></span>&nbsp;&nbsp;&nbsp;原价¥38</div>
-        <div class="btn"> <a href="#"> <%= image_tag("tu_4.jpg") %></a></div>
-      </div>
-      <div class="like">
-        <ul>
-          <li><a title="喜欢"></a><%= image_tag("heart1.gif") %></li>
-          <li>282</li>
-          <li>分享</li>
-          <li><a href="#">举报</a></li>
-        </ul>
-      </div>
+      <a target="_blank" href="<%= deal_path(deal) %>"><img src="<%= deal.image_link %>" /></a>
+      <p><a target="_blank" href="<%= deal_path(deal) %>"><%= deal.title %></a><span>￥<%= deal.price %></span></p>
     </div>
   <% end %>
 </div>

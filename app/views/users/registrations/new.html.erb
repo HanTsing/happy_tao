@@ -1,0 +1,31 @@
+<%#= render "users/shared/links" %>
+<div class="regisiter_center">
+  <div class="regi_left">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <label>
+        <strong class="ziti">邮&nbsp;&nbsp;&nbsp;箱:</strong>
+        <%= f.email_field :email, :autofocus => true, :style => "width:300px; height:30px; margin-left:38px; color:#656565;" %>
+      </label>
+      <br/>
+
+      <label>
+        <strong class="ziti">密&nbsp;&nbsp;&nbsp;码:</strong>
+        <%= f.password_field :password, :style => "width:300px; height:30px; margin-left:38px; color:#656565;" %>
+      </label>
+
+      <label>
+        <strong class="ziti">确认密码:</strong>
+        <%= f.password_field :password_confirmation, :style => "width:300px; height:30px; margin-left:20px;color:#656565;" %>
+      </label>
+
+      <label>
+        <strong ></strong>
+        <input type="submit" name="commit"   value="立即注册"class="regi_sub"   />
+      </label>
+    <% end %>
+  </div>
+  <div class="regi_right">
+  </div>
+</div>

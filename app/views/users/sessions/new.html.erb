@@ -1,0 +1,40 @@
+<%#= render "users/shared/links" %>
+<div class="login_center">
+  <div class="center_left">
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <label>
+        <strong class="ziti">用户名:</strong>
+        <%= f.email_field :email, :autofocus => true, :style => "width:220px; height:25px; margin-left:20px;" %>
+      </label><br />
+      <label>
+        <strong class="ziti">密&nbsp;&nbsp;&nbsp;&nbsp;码:</strong>
+        <%= f.password_field :password, :style => "width:220px; height:25px; margin-left:20px;" %>
+      </label>
+      <label>
+        <strong class="remember_me">记住我:</strong>
+        <% if devise_mapping.rememberable? -%>
+          <%= f.check_box :remember_me %>
+        <% end -%>
+      </label>
+      <label>
+        <strong ></strong>
+        <%= f.submit "", :class => "sub" %>
+        <a href="#">忘记密码</a>
+      </label>
+
+    <% end %>
+  </form>
+  <div class="othlogin">
+    <h2>您还可以通过以下方式登录</h2>
+    <p>
+    <a href="#" class="sina"></a>
+    <a href="#" class="qq"></a>
+    <a href="#" class="taobao"></a>
+    </p>
+  </div>
+</div>
+<div class="center_right">
+  <h2>您还没有注册？<a href="#">立即注册</a></h2>
+  <div class="center_right_bg"></div>
+</div>
+</div>
